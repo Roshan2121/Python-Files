@@ -1,0 +1,5 @@
+looking at the following syntax list.sort() we can say that list is an object and sort is a method. Hence this concept is related to OOP. In this method the list is not getting copied on to a new list  and we are not passing any arguement to the method.
+
+Here in sorted(list), sorted is a function and list is being passed as an arguement to it. Hence this list is being copied to another list which is the parameter of the sorted function. Copying takes time and consumes unnessary space.
+
+Here we can conclude that list.sort() is much better than sorted(list).

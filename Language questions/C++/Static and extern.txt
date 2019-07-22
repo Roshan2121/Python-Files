@@ -1,0 +1,11 @@
+Static and Extern Keywords:
+static: The variables and functions can only be used in the file they are defined and not accessible in any of the other files.
+extern: Variables and functions can be used in any of the code files inside the same project folder.
+
+About Global variables and functions:
+Constant global variables are static by default and non constant global variables are extern by default.
+Whenever we want to use the global variables in other file we first have to note the following things.
+1). They are extern either by default or we have to make them default manually.
+2). We have to define the variables in atleast one of the files and then use the header file in the rest of the files.
+
+Now functions, are extern by default. We havw to fist forward declare the functions in the file we want to use it. The definition may be in some other file or a header file.

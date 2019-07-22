@@ -1,0 +1,16 @@
+What is a Function Pointer?
+Pointer pointing to a function is called a function pointer.
+
+Do functions have adderss assigned to them?
+Yes, each and every function is given a unique address during 
+
+Syntax:
+ReturnType (*pointerName)(arguements) = functionName;
+Hence from now the funcntion can be called by using the function pointer. Calling the function using function pointer is done in the same way we were calling it using the function name.
+Syntax:
+pointerName(arguements);
+
+Now the question is why do we actually need this when we can call the functions directly?
+1). When we want to give different functions as an arguement to another function we can use function pointers to make that happen.
+i.e. we should pass address of the function as an arguement.
+2). To create array of functions. We cannot store functions directil into an array. Hence we use function pointers.

@@ -1,0 +1,14 @@
+Functions in python to reduce our work load while using Python
+map and filter classes are the subclasses of the iterator class.
+map function in python:
+map function is used to apply a function on all the elements of specified iterable and return map object. Python map object is an iterator, so we can iterate over its elements. We can also convert map objects to list,, tuple etc.
+Syntax:
+map_obj = map(function, iterable)
+
+filter function in python:
+Used to filter unwanted elements from the list.
+Syntax:
+filter_obj = filter(function, iterable)
+based on the true(> 0 <) or false(0) the elements will be filtered out. True means yes we want that element if false we dont want that.
+False values:
+"", 0, 0.0, 0j, [], (), {}, False. 

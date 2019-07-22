@@ -1,0 +1,11 @@
+scrapy startproject project_name
+scrapy crawl name.
+scrapy crawl name -o filenname.extension (To save the scraped data)
+scrapy genspider file_name website (To create a readymade spider for us).
+
+You can automate the extraction of data in the form of a file by including these two line in the setting.py file.
+FEED_FORMAT = 'csv or xml or json'.
+FEED_URI = 'path to where the data to be stored'. If no path is provided and only file name is mentioned then the data will be stored in the project folder in which we are working.
+
+custom_settings : This is used to set settings of an individual spider. Remember that settings.py is for the whole project
+Hence if we want to change in the settings only for this spider then use custom settings. custom settings is a dictionary inside ths spider folder. Defined as class dictionary.

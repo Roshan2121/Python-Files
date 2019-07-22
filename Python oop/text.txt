@@ -1,0 +1,65 @@
+Classes:
+Classes contains the behaviour and properties of the real world entities. Its like a blue print and specifies how the object of this class would function and what all functionality it has. Its a used defined datatype.
+
+Objects:
+objects are the real world entities with which we work.
+
+syntax: for creating a class:
+
+class class_name:
+    //code//
+
+creating objects of a class, 
+object_name = class_name()
+-------------------------------------------------------------------
+methods:
+Functions inside classes are called methods. In methods there is atleast one arguement and that is the object itself. Unlike C++ here we need to explicitely specify to which object we are referring to. Defining methods are same like defining normal functions. 
+
+In methods there is a special method called __init__(). This is nothing but a constructor in python. Used to initialize instances of an object and runs automatically when an object is created.
+-------------------------------------------------------------------
+Instances:
+When the interpreter comes with syntax 
+object.Instance or self.instance. It checks if that instance is there already if its there then it will overwrite the value else it will create on and initialize it.
+while printing if the instance is ther then it prints its value else it will produce an error that the object has no instance called so and so....
+-------------------------------------------------------------------
+What happens when we call a method?
+When method is called the compiler first checks in the instances, as its the method its obvious it wont find any. THen it will check for in the class, if it finds that method then it executes that else it will produce an error. 
+So basically first the interpreter will check in the instance address block then in the class.
+-------------------------------------------------------------------
+Another special method after __init__():
+This is __str__()
+When we print an object directly, it prints that the object is of the type class_name and nothing else. Hence when we print two objects of the same class the same thing gets printed. Then how do we differentiate the two objects on printing them directly. Here we use this method. This method prints what it returns.
+-------------------------------------------------------------------
+Operator Overloading in python.(Search for this)
+-------------------------------------------------------------------
+Class Variables and Instance Variables:
+Instance Variables belong to the object where as the class objects belong to the class.
+Instance variables can be accessed only by their respective objects. But class variables can be accessed by class or any object, its one and the same.
+Behind the scenes: The interpretes searches for the instance in the object memory but when it does not find in this then it will search for it in the class and there it finds the variable.
+
+===================================================================
+
+Inheritance In Python:
+Inheritance is used to represent "is a" relationship between the two classes. Relationship between objects of a class and the same class is kind of "has a" relationship. 
+Inheritance is used to reuse the existing code written. This saves time and length of the code.
+
+syntax:
+class derived(base):    Single inheritance.
+    //code//
+
+class derived(base1, base2, ....):    Multiple Inheritance.
+    //code//
+
+Multilevel and Hirerchical are two other types of inheritance.
+----------------------------------------------------------------
+Working of derived object:
+When we try to access something using the derived objects the interpreter checks for it in the derived class if not found then it goes to the Base class if not found there then prints an error message.
+
+Based on the aboove concept lets look at the concept of overriding functions.
+Overriding functions are the functions with same prototype in the derived class and base class. Hence the derived one will be called and not the base class one.
+To call the base class methods or variables we have to explicitly mention it. Syntax:
+Base_class_name.method_name(object)
+
+Function overhiding in Python.
+Function in derived class with same name but different parameters or return type as that compered to the method of the base class with the same name.
+===================================================================

@@ -1,0 +1,23 @@
+Types of ways to use a function in more than one way.
+
+1). Function Overloading.
+
+Functions having same name but with atleast one parameter of different type. So that the compiler can identify which function to call. If there are functions with same prototype more than once the it produces an error.
+While identifying function it follows 3 paths.
+i) Exact Match.
+ii) Type Promotion. (char to int and float to double)
+iii) Type Conversion. (primitive to primitive data types)
+If more than one functions match then its an ambigious case and will produce an error.
+
+Next two are the polymorphism technique used in Inheritance concept of Object Oriented Programming.
+
+2). Function Overriding.
+Base class and Derived class having a function with same prototype.
+
+3). Function Overhiding.
+Base class and Derived class having functions with same name but different prototype. Here if function in Derived did not match then the compiler will not look for a match in Base class.
+
+Rule of function identification in OOP.
+If the function which is being looked for is not ther in the derived class the the compiler will search for it in the base class. But if a function is there in the derived class with the same name as that of the function being called then the compiler will look for a match in the derived class only and not got for the base class at any cost. If the match is not found then it will produce an error.
+
+Hence Function overloading is in the same class and other two are across the base and derived class.

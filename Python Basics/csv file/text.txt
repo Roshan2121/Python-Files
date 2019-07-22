@@ -1,0 +1,9 @@
+Working with csv files:  (comma seperted values).
+Here the values are seperated by commas and hence comma is a delimiter.
+First import the csv module.
+open the csv file with the mode we want. To open this file syntax is same as that of opeaning the .txt file.
+
+csv.reader(filename, delimiter)
+csv.writer(filename, mode, delimiter)
+csv.writerow(list or tuple)
+csv.DictReader(filename, delimiter)

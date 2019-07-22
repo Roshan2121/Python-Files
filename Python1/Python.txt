@@ -1,0 +1,12 @@
+5 ** number = 5 to the power that number  5//number = integer value of the result (greatest integer function)
+Pemdas
+power exponent multi division addition subtraction
+type casting to boolean bool(variable)
+to find ascii value of the character use ord(character)
+ascii to char use chr(ascii value)
+while printing to seperate the things with something use sep = the string with which it is to be seperated by default its a space
+to end after printing we use end = the string with which it is to be ended by default it is a new line character
+print('What\'s your name')
+that slash is the escape sequence
+
+try, except, finally (to be learnt)

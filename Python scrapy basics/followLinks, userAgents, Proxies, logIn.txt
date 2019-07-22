@@ -1,0 +1,36 @@
+Following Links:
+
+response object has got a method called follow(2 parameters)
+The two parameters are where to go next and another is call for a function and that function does the required thing that we want to do in that link.
+
+reponse.follow(next_link, any function call)
+eg: reponse.follow(next_page(href value), callback=self.parse)
+
+User agent:
+
+While scraping, when we send request to a website the site asks for the identity of the browser. This identity is called the user agent.
+Sometimes the sites keep some restrictions and block some user agents. If our request is getting rejected, we can trick the site by changing our user agent. Hence we download a packege called 
+scrapy-user-agent to generate many fake user agents.
+
+Proxies:
+
+As every computer have an IP address and its not private. Anyone has access to what our IP address is. Hence a site can ban us from once again getting in their site by banning our IP address. Hence we can even trick the site here by generating many fake IP address and using them in rotation. We need scrapy-proxy tool module for that case.
+
+Login into websites using scrapy.
+
+We should know this cause in many of the websites as we send a request to the website to open up, it will not open untill we login. Like Facebook, Instagram etc. Its not the case in Amazon(we can scrape without logging in). 
+To login into websites we need three things.
+1). csrf token
+2). email id
+3). password
+We can get csrf token from the source code. So we need to scrape that first. Code snippet below: Here the start url should be the login page url.
+
+def parse(self, response):
+    token = response.css(path).extract()
+    return FormRequest.form_response(response, formdata={
+        'csrf_token' : token,
+        'username' : 'roshannayak610@gmail.com',
+        'password' : ..........., (not in dots!!)
+    }), callback=self.functionName()
+
+THis functionName is the name of the function that starts scraping.

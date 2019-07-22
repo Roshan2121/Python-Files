@@ -1,0 +1,18 @@
+Link Extractor:
+Whose only purpose is to extract links from the web pages which will be eventually followed.
+We can make use of it from 
+scrapy.linkextractors.LinkExtractor
+But we can create our own link extractors that suits our needs.
+
+The only public method that every link extractor has is extract_links, which receives a Response object and returns a list of scrapy.link.Link objects. Link extractors are meant to be instantiated once and their extract_links method called several times with different responses to extract links to follow.
+
+LinkExtractor is a class in the scrapy.linkextractors module.
+
+Parameters:	
+allow (a regular expression (or list of)) – a single regular expression (or list of regular expressions) that the (absolute) urls must match in order to be extracted. If not given (or empty), it will match all links.
+deny (a regular expression (or list of)) – a single regular expression (or list of regular expressions) that the (absolute) urls must match in order to be excluded (ie. not extracted). It has precedence over the allow parameter. If not given (or empty) it won’t exclude any links.
+allow_domains (str or list) – a single value or a list of string containing domains which will be considered for extracting the links
+deny_domains (str or list) – a single value or a list of strings containing domains which won’t be considered for extracting the links
+deny_extensions (list) – a single value or list of strings containing extensions that should be ignored when extracting links. If not given, it will default to the IGNORED_EXTENSIONS list defined in the scrapy.linkextractors package.
+tags (str or list) – a tag or a list of tags to consider when extracting links. Defaults to ('a', 'area').
+attrs (list) – an attribute or list of attributes which should be considered when looking for links to extract (only for those tags specified in the tags parameter). Defaults to ('href',)

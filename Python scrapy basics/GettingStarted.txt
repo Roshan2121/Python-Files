@@ -1,0 +1,23 @@
+To use a class from another file in the same folder from that file import the class.
+eg: from ..file_name import class_name
+.. is to be used.
+
+scraper is a class inherited from the Spider class.
+name is the name given to the spider.
+allowed_domains and start_urls to be included which specifies where ths spider is gonna scrape.
+All our coding related to scraping is to be done in the parse method inside the scraper class. Arguements are the self(should know what this is) and response(contains the downloaded source code of the web page).
+
+NOTE: In python all variables are objects of some class.
+
+Use response to parse through the source code and extract the required thing.
+When we use the extract() method the object will be of type list else it will be of the type same as that of the response. Hence we can perform all the operations on that object that we could perform on response.
+eg: Here infos is of the same type as that of the list. Hence we can call css method using infos. Hence parse the contents of infos further and extract the required thing that is quote and by.
+Now quote and written_by are list and not of type response. Hence we cannot further use css selectors on them.
+
+container is an object of the class ScraperItem and we can use that as a dictionary.
+
+To run the crawler use the command 
+scrapy crawl name
+
+To store the data in any format 
+scrapy crawl name -o filename.extension (json, csv, xml)

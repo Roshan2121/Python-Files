@@ -1,0 +1,32 @@
+Files in python
+
+open() method is used to open the file. It takes two parameters,
+one is the file name in the form of the string.
+another is the mode.
+
+4 ways(modes) to interact with the files in python.
+1). read (default one) symbol = 'r'
+Used to read the contents from the file. Will produce an error if the mentioned file does not exist.
+syntax:
+file_pointer = open(file name, 'r')
+some methods: i) read() :- reads the whole file.
+	      ii) read(how many characters) :- reads the number of cheracters mentioned below.
+              iii) readline() :- Used to read a whole line.
+	      iv) or loop through the file line by line.
+
+2). create  symbol = 'x'
+Used to create a file. Returns an error if the file already exists.
+
+3). write  symbol = 'w'
+Used to write to the file using write function.
+syntax: file_pointer.write(string)
+But here the write mode will delete all the contents from the file and start freshly. This is helpful in some cases when we are not in need of the data that is in the file and want to write new things in the file.
+
+4). append  symbol = 'a'
+Used to write to the file. This is not like write mode. Its does not delete the existing data, just appends the data mentioned by us.
+syntax: file_pointer.write(string)
+
+file_pointer.close()
+This is used to close the file on which we were working. This is done to avoid unexpected changes in the file and to ensure that the data inside the file is correct and safe.
+
+We can also delete the file but we need the knoweledge of os module. Lets look at that later.

@@ -1,0 +1,55 @@
+std::vector     
+
+syntax:
+std::vector<data type> name;
+
+accessing the elements from the vector:
+We can access the elements either using the subscript or the at() member function.
+subscript method does no bounds checking where as the at() member function does the bounds checking and reports us in the form of an error.
+
+length of the vectors:
+using the size() member function. Size of the vector is the number of elements currently in the array. Size is always less than the capacity. The areas within the size will contain the numbers that we wanted to store and 0's in those areas to which we didnt explicitly initialize.
+Like if the initial size was 6 and had the numbers 1, 2, 3, 4, 5, 6 in the vector when we change ths size to 8 the vector will contain  1, 2, 3, 4, 5, 6, 0, 0. 0 in the 7th and 8th position as we didnt assign any value to that memory.
+
+Capacity of the vectors:
+using the capacity() member function.
+The thing about the capacity is that its keeps on getting doubled starting from the initial size of the vector as more and more elements come into the vector. Initial size is the size it gets first after initializing.
+This is if the initial size is 1 then on pushing the elements into the vector will increase the capacity as 2, 4, 8, 16......
+
+Resizing the vectors:
+using the resize(new length) member function.
+While resizing the new elements are given the default value of 0.
+
+Entering the values into the vector:
+We can assign values to the vector elements using subscript operator or at() method.
+Like vector_name[position] = value;
+vector_name.at(position) = value;
+But the problem with this is that when we go beyond the size of the vector this produces an error. Hence we have to manually increase the size of the vector and then assign value in this way.
+There is a member function in the vector class which pushes the elements into the vector at the end of the size.
+If the size of the vector was 3 with elements 1, 2, 0 (1 and 2 entered by us but 0 is the default value) when we push_back 4 the vector becomes 1, 2, 0, 4 and not 1, 2, 4.
+Syntax: vector_name.push_back(what you wanna push);
+push_back method can change the capacity as pre the need. Hence to dynamically push elements into the vector we shall use the push_back method.
+
+Removing the last element form the vector:
+Use the pop_back method.
+
+Clear the vector:
+Deletes all the elements from the array.
+After deleting the capacity remains the same but the size reduces to 0.
+Use the clear() method.
+
+front and back methods:
+front() returns the first value of the vector.
+back() returns the last value of the vector.
+
+To remove and insert element into the vector:
+vector_name.insert(vector_name.begin() + x, what to insert);
+vector_name.erase(vector_name.begin() + x);
+x is the gap between the required position and the beginning element.
+
+To sort the vector we can use a function called the sort from the std namespace. This function is coded in the <algorithm> header.
+Syntax: sort(vector_name.begin(), vector_name.end());
+
+
+
+

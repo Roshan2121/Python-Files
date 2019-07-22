@@ -1,0 +1,13 @@
+Memory types and what they are used for:
+
+Note before proceeding: During compile the compiler does not allocate memory to any of the variables. Its only during run time.
+
+1). Text Segment: This is the part of the memory where our compiled code is stored.
+
+2). Data Segment: This is the place where the static and global variables are stored.
+	i). Initialized Data: Here initialized variables are stored.
+	ii). Non-Initialized Data: Here the variables which are not yet initialized are stored.
+
+3). Stack: This is the stack of data structures. This part of the memory is used to store the local variables of various functions (Including the main function). Here the functions are placed on top of the other. like, as the function is called, the functions are pushed into the stack and as the functions are done executing they are removed from the stack and local variables are destroyed from the stack. Its LIFO(Last In First Out). Local variables are created once again as the function is called.
+
+4). Heap: This is used to store the dynamically allocated memory. The memory stored here are not destroyed when they go out of scope. Either we have to delete them manually or they get deleted as the program execution ends.

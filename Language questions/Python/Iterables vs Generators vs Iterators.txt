@@ -1,0 +1,22 @@
+iterables:
+    A python iterable is a sequence of data that has the ability to return its each and every element at once. Which generators and iterators cannot. We can also pass the iterables to the functions like zip, map, iter as arguements as they need one. We can access the elements by subscripting them but not possible in the other two. 
+
+Generators:
+    A python generator function lend us a sequence of values to python iterate on. Generators are the objects of the class Generator. A generator contains yield expression.
+    Unlike return each yield temporarily suspends processing, remembering the location execution state (including local variables and pending  try-statements). When the generator iterator resumes, it picks-up where it left-off (in contrast to functions which start fresh on every invocation).
+
+Iterators:
+    A python iterator returns us an iterator object- one value at a time. Iterators are the objects of the class Iterator.
+===================================================================
+Generators VS Iterators.
+Comparison:
+1). In creating a generator we use a function but in creating an iterator we can use the iter() and next() functions.
+2). Generator makes use of the yield keyword, iterator doesn't.
+3). Python generator saves the states of the local variables every time ‘yield’ pauses the loop in python. An iterator does not make use of local variables, all it needs is iterable to iterate on.
+4). Generators are faster than iterators but less memory efficient than iterators.
+
+Relationships:
+generator class is the subclass of the iterator class. Hence every generator is an iterator but the opposite is not true.
+
+Conclusions:
+Iterator needs iter() function where generator donot want that. Generators are formed using yield expressions. Iterator needs a iterable as an arguement but generator donot want it. Local variables can be used to form a generator.

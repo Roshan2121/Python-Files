@@ -1,0 +1,5 @@
+Pipeline:
+
+First we need to uncomment 3 lines in the settings.py file, that is to activate the pipeline. Else that file will not be considered.
+
+This part is used to process the data and put some conditions on the data.

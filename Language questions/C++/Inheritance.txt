@@ -1,0 +1,1 @@
+Objects and classes have a "has a" relationship, whereas derived class and base class have a "is a" relationship.
